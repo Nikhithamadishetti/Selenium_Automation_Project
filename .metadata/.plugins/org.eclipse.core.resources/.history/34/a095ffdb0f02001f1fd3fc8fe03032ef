@@ -1,0 +1,68 @@
+package com.inetbanking.testCases;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrowserWindowHandling {
+
+	public static void main(String args[]) throws InterruptedException
+	{
+	
+		WebDriver driver=new ChromeDriver();
+	    driver.get("https://opensource-demo.orangehrmlive.com/");
+        driver.manage().window().maximize();
+        
+        
+//        String parentWindow=driver.getWindowHandle();
+//        System.out.println("parentWindow ID:" +parentWindow);
+        
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
+        Thread.sleep(2000);
+        
+       
+        Set<String> windowIDs=driver.getWindowHandles();
+        
+        ////First Method-> Using iterator method 
+//        Iterator<String> it=windowIDs.iterator();
+//        String parentWindow=it.next();
+//        String childWindow=it.next();
+//        
+//        
+//        System.out.println("parentWindow ID:" +parentWindow);
+//        System.out.println("childWindow ID:" +childWindow);
+        
+        ///// Second Method-> using List collection
+        
+        List<String> windowIDsList=new ArrayList<String>(windowIDs);  //--> converting set to list
+      
+//        String parentWindow=windowIDsList.get(0);
+//        String childWindow=windowIDsList.get(1);
+//        
+//        System.out.println("parentWindow ID:" +parentWindow);
+//        System.out.println("childWindow ID:" +childWindow);
+//        
+//        ///How to switch btn windows
+//        
+//        driver.switchTo().window(parentWindow);
+//        System.out.println("parentWindow Title:" +driver.getTitle());
+//        
+//        driver.switchTo().window(childWindow);
+//        System.out.println("childWindow Title:" +driver.getTitle());
+        
+        
+        //code optimaiztion i want to handle multiple windows and get window ids and Titles of those windows
+        
+        //forEach loop
+        for()
+        
+        
+        driver.quit();
+	}
+}

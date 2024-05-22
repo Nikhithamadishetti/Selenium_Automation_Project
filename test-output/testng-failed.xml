@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [InetBankingV1]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="BankingApp Test(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.inetbanking.testCases.TC_LoginPage_001">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.inetbanking.testCases.TC_LoginPage_001 -->
+      <class name="com.inetbanking.testCases.TC_HomePage_003">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Homepage"/>
+        </methods>
+      </class> <!-- com.inetbanking.testCases.TC_HomePage_003 -->
+    </classes>
+  </test> <!-- BankingApp Test(failed) -->
+</suite> <!-- Failed suite [InetBankingV1] -->

@@ -1,0 +1,23 @@
+package com.inetbanking.testCases;
+
+public class StaticNonStatic {
+	   //Static variable
+       public static int age=10;
+       //static method
+       public static void method1() {
+    	   System.out.println("This is static method");
+       }
+       //instance variable
+       int age1=20;
+       
+       public static void main(String args[])
+       {
+    	   // we can call static variale with class name directly
+    	   System.out.println(StaticNonStatic.age);
+    	   // we can call static method with classname directly
+    	   StaticNonStatic.method1();
+       }
+       
+       
+       
+}

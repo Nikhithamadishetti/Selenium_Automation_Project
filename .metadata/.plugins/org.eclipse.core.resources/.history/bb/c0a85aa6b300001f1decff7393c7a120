@@ -1,0 +1,8 @@
+package com.inetbanking.utilities;
+
+public class ReadConfig {
+	
+	Properties pro;
+	
+
+}

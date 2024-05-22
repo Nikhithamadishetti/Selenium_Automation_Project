@@ -1,0 +1,16 @@
+package com.inetbanking.testCases;
+
+public class ConstructorDemo {
+	
+	private String fname;
+	private String lname;
+	 
+	public ConstructorDemo(String fname,String lname)
+	{
+		this.fname=fname;
+		this.lname=lname;
+	}
+	
+	ConstructorDemo cd=new ConstructorDemo("niki","madi");
+
+}
