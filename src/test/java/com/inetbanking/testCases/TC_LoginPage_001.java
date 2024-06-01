@@ -11,7 +11,7 @@ public class TC_LoginPage_001 extends BaseClass {
 	@Test
 	public void loginTest() throws InterruptedException, IOException
 	{
-		logger.info("URL is opened");
+		//logger.info("URL is opened");
 		LoginPage lp=new LoginPage(driver);
 		Thread.sleep(1000);
 		lp.setUserName(username);
@@ -23,12 +23,12 @@ public class TC_LoginPage_001 extends BaseClass {
 		String str=driver.getTitle();
 		if(str.equalsIgnoreCase("Guru99 Bank Manager HomePage")) {
 			Assert.assertTrue(true);
-			logger.info("Login test passed");
+			//logger.info("Login test passed");
 		}
 		else {
 			captureScreen(driver,"loginTest");
 			Assert.assertTrue(false);
-			logger.info("Login test failed");
+			//logger.info("Login test failed");
 		}
 	}
 

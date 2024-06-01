@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="InetBankingV1" parallel="classes" thread-count="2">
+<suite name="InetBankingV1">
 	
-	 <!--<listeners>
-		<listener class-name="Listeners.GenerateExtentReport"></listener>
-	</listeners>-->
+	<listeners>
+		<listener class-name="com.inetbanking.utilities.Reporting" />
+	</listeners>
+
 	
 	 <!--<listeners>
 		<listener class-name="Listeners.Listener"></listener>
@@ -13,11 +14,10 @@
 	
 	
 	<test name="BankingApp Test">
-		<parameter name="browser" value="firefox"/>
+		<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.inetbanking.testCases.TC_LoginPage_001"/>
-            <!--<class name="com.inetbanking.testCases.TC_HomePage_002"/>-->
-			<class name="com.inetbanking.testCases.TC_HomePage_003"/>
+ 
 		</classes>
 	</test>
 </suite>

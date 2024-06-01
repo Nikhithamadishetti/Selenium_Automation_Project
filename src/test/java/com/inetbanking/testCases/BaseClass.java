@@ -19,7 +19,6 @@ import org.testng.annotations.Parameters;
 
 import com.inetbanking.utilities.ReadConfig;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
@@ -35,16 +34,16 @@ public class BaseClass {
 	@BeforeClass
 	public void setUp(String br) {
 		logger = Logger.getLogger("InectBanking");
-		PropertyConfigurator.configure("C://Users//nmadishetti//git//InectBanking//log4j.properties");
+		PropertyConfigurator.configure("C://Users//nmadishetti//OneDrive - DXC Production//Desktop//InectBanking//log4j.properties");
 
 		if (br.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			// System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+			//WebDriverManager.chromedriver().setup();
+			 System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
 			driver = new ChromeDriver();
 		}
 
 		else if (br.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			// System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxPath());
 			driver = new FirefoxDriver();
 		}

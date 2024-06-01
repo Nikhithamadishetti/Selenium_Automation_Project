@@ -11,7 +11,7 @@ public class TC_HomePage_003 extends BaseClass{
 	
 	@Test
 	public void Homepage() throws InterruptedException, IOException {
-		logger.info("Login Successfull");
+		//logger.info("Login Successfull");
 		LoginPage lp=new LoginPage(driver);
 		lp.setUserName(username);
 		lp.setPassword(password);
@@ -19,7 +19,7 @@ public class TC_HomePage_003 extends BaseClass{
 		
 		Thread.sleep(5000);
 		
-		logger.info("Addding Customer Details");
+		//logger.info("Addding Customer Details");
 		HomePage cusdetails=new HomePage(driver);
 		cusdetails.ClickAddNewCustomer();
 
